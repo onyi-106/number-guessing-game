@@ -38,8 +38,20 @@ def play_game():
     elif guess == ANSWER:
       return print(f"\nYou got the answer! It was {ANSWER}")
 
-#Calling the game function
-play_game()
 
-while input("Type 'y' to play again 'n' to stop") == "y":
+
+
+#Calling the game function
+
+play_game()
+end_of_game = False
+while not end_of_game:
+  play_again = input("\nType 'y' to play again, 'n' to stop: ")
+  if play_again == "y":
+    play_game()
+  elif play_again == "n":
+    end_of_game = True
+  else:
+    print("YES (y) or NO (n)??!!")
+
   
